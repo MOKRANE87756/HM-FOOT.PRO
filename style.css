@@ -22,19 +22,60 @@ nav ul li a {
   font-weight: bold;
 }
 
-.hero {
-  text-align: center;
-  padding: 4rem 2rem;
-  background: url('../images/hero.jpg') center/cover no-repeat;
-  color: white;
-}
-
 footer {
   background-color: #8b3e2f;
   color: white;
   text-align: center;
   padding: 1rem;
   margin-top: 2rem;
+}
+
+.hero {
+  position: relative;
+  background: url('../images/hero.jpg') center/cover no-repeat;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-align: center;
+}
+
+.hero .overlay {
+  background: rgba(0, 0, 0, 0.5);
+  padding: 3rem;
+  border-radius: 20px;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  font-size: 1.3rem;
+  margin-bottom: 2rem;
+}
+
+.btn,
+.add-product button,
+button[type="submit"] {
+  background-color: #8b3e2f;
+  color: white;
+  border: none;
+  padding: 0.8rem 1.5rem;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 0.3s ease;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.btn:hover,
+.add-product button:hover,
+button[type="submit"]:hover {
+  background-color: #a14937;
 }
 
 .products {
@@ -55,17 +96,28 @@ footer {
 }
 
 .product-card {
+  display: flex;
+  flex-direction: column;
   background-color: white;
-  border-radius: 10px;
-  box-shadow: 0 1px 8px rgba(0,0,0,0.1);
+  border-radius: 12px;
   overflow: hidden;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s;
   text-align: center;
 }
 
+.product-card:hover {
+  transform: translateY(-5px);
+}
+
 .product-card img {
-  width: 100%;
-  height: 180px;
+  height: 200px;
   object-fit: cover;
+  width: 100%;
+}
+
+.product-info {
+  padding: 1rem;
 }
 
 .product-card h3 {
@@ -81,27 +133,12 @@ footer {
   display: block;
   margin: 0.5rem 0 1rem;
   font-weight: bold;
-  color: #8b3e2f;
+  color: #6b3a2c;
 }
 
 .add-product {
   text-align: center;
   margin-top: 2rem;
-}
-
-.add-product button {
-  background-color: #8b3e2f;
-  color: white;
-  border: none;
-  padding: 0.7rem 1.5rem;
-  border-radius: 8px;
-  font-size: 1rem;
-  cursor: pointer;
-  transition: 0.3s ease;
-}
-
-.add-product button:hover {
-  background-color: #a14937;
 }
 
 .about, .contact {
@@ -126,15 +163,21 @@ input, textarea {
   border-radius: 6px;
 }
 
-button[type="submit"] {
-  background-color: #8b3e2f;
-  color: white;
-  border: none;
-  padding: 0.8rem;
-  border-radius: 6px;
-  cursor: pointer;
-}
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 2rem;
+  }
 
-button[type="submit"]:hover {
-  background-color: #a14937;
+  .hero p {
+    font-size: 1rem;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .product-grid {
+    grid-template-columns: 1fr;
+  }
 }
