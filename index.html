@@ -1,42 +1,49 @@
+<!-- products.html -->
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>تقاليد الجزائر</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>منتجاتنا</title>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
   <header>
     <nav>
       <ul>
-        <li><a href="#">الرئيسية</a></li>
-        <li><a href="#">المقالات</a></li>
-        <li><a href="#">التراث</a></li>
-        <li><a href="#">حول الموقع</a></li>
+        <li><a href="index.html">الرئيسية</a></li>
+        <li><a href="products.html">المنتجات</a></li>
+        <li><a href="about.html">حول</a></li>
+        <li><a href="contact.html">اتصل بنا</a></li>
       </ul>
     </nav>
-    <div class="hero">
-      <h1>مرحبًا بكم في عالم التقاليد الجزائرية</h1>
-    </div>
   </header>
 
-  <section class="articles">
-    <div class="article-card">
-      <img src="images/article1.jpg" alt="اللباس التقليدي" />
-      <h3>اللباس التقليدي الجزائري</h3>
-      <p>تعرف على أنواع اللباس في مختلف مناطق الوطن...</p>
+  <section class="products">
+    <h2>منتجات تقليدية</h2>
+    <div class="product-grid">
+      <div class="product-card">
+        <img src="images/product1.jpg" alt="قندورة تقليدية">
+        <h3>قندورة وهرانية</h3>
+        <p>لباس مطرز يدويًا من وهران</p>
+        <span class="price">7500 دج</span>
+      </div>
+
+      <div class="product-card">
+        <img src="images/product2.jpg" alt="فخار أمازيغي">
+        <h3>فخار أمازيغي</h3>
+        <p>تحفة مصنوعة يدويًا من جبال الأوراس</p>
+        <span class="price">3200 دج</span>
+      </div>
     </div>
-    <div class="article-card">
-      <img src="images/article2.jpg" alt="الموسيقى الشعبية" />
-      <h3>الموسيقى الشعبية</h3>
-      <p>من الراي إلى المالوف، تنوع موسيقي يعكس التراث...</p>
+
+    <div class="add-product">
+      <button onclick="alert('ميزة الإضافة قيد التطوير')">➕ أضف منتج</button>
     </div>
   </section>
 
   <footer>
-    <p>© 2025 جميع الحقوق محفوظة - تقاليد الجزائر</p>
+    <p>جميع الحقوق محفوظة &copy; 2025 - HM-Shop</p>
   </footer>
-<li><a href="#">منتجات</a></li>
 </body>
 </html>
