@@ -1,0 +1,32 @@
+
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <title>إضافة منتج</title>
+</head>
+<body>
+    <h2>إضافة منتج جديد</h2>
+    <form id="productForm">
+        <input type="text" id="name" placeholder="اسم المنتج" required><br>
+        <input type="text" id="desc" placeholder="وصف المنتج"><br>
+        <input type="text" id="image" placeholder="رابط الصورة"><br>
+        <button type="submit">إضافة</button>
+    </form>
+    <a href="index.html">↩ الرجوع للرئيسية</a>
+    <script>
+        document.getElementById("productForm").onsubmit = function(e) {
+            e.preventDefault();
+            let products = JSON.parse(localStorage.getItem("products")) || [];
+            const p = {
+                name: document.getElementById("name").value,
+                desc: document.getElementById("desc").value,
+                image: document.getElementById("image").value
+            };
+            products.push(p);
+            localStorage.setItem("products", JSON.stringify(products));
+            alert("تمت إضافة المنتج!");
+        };
+    </script>
+</body>
+</html>
