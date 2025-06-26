@@ -1,0 +1,29 @@
+
+body {
+    font-family: sans-serif;
+    background: #f8f8f8;
+    margin: 0;
+    padding: 0;
+    direction: rtl;
+}
+header {
+    background: #007bff;
+    color: white;
+    padding: 1em;
+    text-align: center;
+}
+nav a {
+    margin: 0 10px;
+    color: white;
+    text-decoration: none;
+}
+main {
+    padding: 1em;
+}
+.product {
+    background: white;
+    border: 1px solid #ddd;
+    margin: 1em 0;
+    padding: 1em;
+    border-radius: 8px;
+}
